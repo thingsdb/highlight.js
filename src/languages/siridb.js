@@ -91,7 +91,7 @@ export default function(hljs) {
             built_in:
                 'database server servers shard shards series pool pools group groups tag tags ' +
                 'access name active_handles time_precision received_points selected_points ' +
-                'sync_progress tee uptime reindex_progress ' +
+                'sync_progress tee timezone uptime reindex_progress ' +
                 'open_files mem_usage max_open_files log_level idle_time idle_percentage ' +
                 'fifo_files active_tasks status shard_duration startup_time online version ' +
                 'uuid port libuv ip_support dbpath buffer_size buffer_path address ' +
