@@ -89,7 +89,7 @@ export default function(hljs) {
             literal:
                 'true false all now debug info warning error critical read write full',
             built_in:
-                'server servers shard shards series pool pools group groups tag tags ' +
+                'database server servers shard shards series pool pools group groups tag tags ' +
                 'access name active_handles time_precision received_points selected_points ' +
                 'sync_progress tee uptime reindex_progress ' +
                 'open_files mem_usage max_open_files log_level idle_time idle_percentage ' +
