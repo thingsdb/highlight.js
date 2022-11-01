@@ -96,7 +96,7 @@ export default function(hljs) {
                     'is_list|is_mpdata|is_nan|is_nil|is_raw|is_regex|is_set|is_str|is_thing|is_timeval|is_tuple|' +
                     'is_utf8|task|tasks|json_dump|json_load|regex|list|mod_enum|mod_type|new|new_type|now|raise|rand|range|' +
                     'randint|randstr|refs|log|rename_enum|rename_type|set|set_enum|set_type|str|thing|try|type|' +
-                    'future|is_future|timeval|type_assert|type_count|type_info|types_info|wse|' +
+                    'future|is_future|timeval|type_assert|type_count|type_info|types_info|wse|nse|' +
                     /* node functions */
                     'backup_info|backups_info|counters|del_backup|' +
                     'has_backup|new_backup|node_info|nodes_info|' +
