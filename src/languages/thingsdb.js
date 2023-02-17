@@ -98,7 +98,7 @@ export default function(hljs) {
                     'randint|randstr|refs|log|rename_enum|rename_type|set|set_enum|set_type|str|thing|try|type|' +
                     'future|is_future|timeval|type_assert|type_count|type_info|types_info|wse|nse|' +
                     /* node functions */
-                    'backup_info|backups_info|counters|del_backup|' +
+                    'backup_info|backups_info|backups_ok|counters|del_backup|' +
                     'has_backup|new_backup|node_info|nodes_info|' +
                     'reset_counters|restart_module|set_log_level|shutdown|' +
                     /* thingsdb functions */
