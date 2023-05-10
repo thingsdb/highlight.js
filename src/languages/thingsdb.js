@@ -110,7 +110,7 @@ export default function(hljs) {
                     'time_zones_info|user_info|users_info|' +
                     'has_module|del_module|module_info|modules_info|new_module|deploy_module|rename_module|set_module_conf|set_module_scope|' +
                     /* procedure functions */
-                    'del_procedure|has_procedure|new_procedure|rename_procedure|' +
+                    'del_procedure|has_procedure|new_procedure|mod_procedure|rename_procedure|' +
                     'procedure_doc|procedure_info|procedures_info|run|' +
                     /* error functions */
                     'assert_err|auth_err|bad_data_err|cancelled_err|forbidden_err|' +
