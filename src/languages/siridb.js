@@ -78,7 +78,7 @@ export default function(hljs) {
                     '\\b(' +
                     'count|derivative|difference|filter|first|interval|' +
                     'last|limit|max|mean|median|median_high|\median_low|min|pvariance|' +
-                    'stddev|sum|timeval|variance)\\s*(?=\\()'
+                    'offset|stddev|sum|timeval|variance)\\s*(?=\\()'
                 ),
             },
         ],
