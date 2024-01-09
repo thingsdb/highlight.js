@@ -16,3 +16,18 @@ __Bold *then italic*__
 
 * list with a *italic item*
 * list with a **bold item**
+
+***This is bold and italic***
+___This is bold and italic___
+
+** i shouldn't be italic**
+
+* and I shouldn't be italic either*
+
+__ not really bold__
+
+_ not italic_
+
+> * One (this point is italic)
+> * Two
+> * Three

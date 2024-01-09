@@ -11,6 +11,7 @@ Incompatibilities:
 
 Renamed Language Files:
 
+- chore(parser): `htmlbars.js` now depends on `handlebars.js` [Josh Goebel][]
 - chore(parser): rename `nimrod.js` to `nim.js` [Josh Goebel][]
 - chore(parser): rename `cs.js` to `csharp.js` [Josh Goebel][]
 - chore(parser): rename `tex.js` to `latex.js` [Josh Goebel][]
@@ -31,7 +32,7 @@ Removed styles:
 
 - chore(styles): darkula.css (use darcula.css instead) [Josh Goebel][]
 
-[Josh Goebel]: https://github.com/yyyc514
+[Josh Goebel]: https://github.com/joshgoebel
 
 ---
 

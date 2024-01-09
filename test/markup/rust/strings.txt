@@ -12,3 +12,9 @@ r"hello";
 r###"world"###;
 r##" "###
 "# "##;
+
+br" ";
+br#"hello"#;
+br##"foo"##;
+
+#[error("\" appears in a string")]

@@ -7,12 +7,13 @@ Website: https://clojure.org
 Category: lisp
 */
 
+/** @type LanguageFn */
 export default function(hljs) {
   return {
     name: 'Clojure REPL',
     contains: [
       {
-        className: 'meta',
+        className: 'meta.prompt',
         begin: /^([\w.-]+|\s*#_)?=>/,
         starts: {
           end: /$/,
@@ -20,5 +21,5 @@ export default function(hljs) {
         }
       }
     ]
-  }
+  };
 }

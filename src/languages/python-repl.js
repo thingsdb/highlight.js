@@ -7,23 +7,24 @@ Category: common
 
 export default function(hljs) {
   return {
-    aliases: ['pycon'],
+    aliases: [ 'pycon' ],
     contains: [
       {
-        className: 'meta',
+        className: 'meta.prompt',
         starts: {
           // a space separates the REPL prefix from the actual code
           // this is purely for cleaner HTML output
           end: / |$/,
           starts: {
-            end: '$', subLanguage: 'python'
+            end: '$',
+            subLanguage: 'python'
           }
         },
         variants: [
           { begin: /^>>>(?=[ ]|$)/ },
           { begin: /^\.\.\.(?=[ ]|$)/ }
         ]
-      },
+      }
     ]
-  }
+  };
 }
