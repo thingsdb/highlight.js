@@ -62,7 +62,7 @@ export default function(hljs) {
 
     var REGEXP = {
         className: 'regexp',
-        begin: new RegExp('(/[^/\\\\\\n]+(?:\\\\.[^/\\\\]*)*/[ismg]*)'),
+        begin: new RegExp('(/[^/\\\\\\n]+(?:\\\\.[^/\\\\]*)*/[gism]*)'),
         relevance: 0,
     }
 
