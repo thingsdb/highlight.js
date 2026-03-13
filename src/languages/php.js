@@ -22,12 +22,15 @@ export default function(hljs) {
   const PASCAL_CASE_CLASS_NAME_RE = regex.concat(
     /(\\?[A-Z][a-z0-9_\x7f-\xff]+|\\?[A-Z]+(?=[A-Z][a-z0-9_\x7f-\xff])){1,}/,
     NOT_PERL_ETC);
+  const UPCASE_NAME_RE = regex.concat(
+    /[A-Z]+/,
+    NOT_PERL_ETC);
   const VARIABLE = {
     scope: 'variable',
     match: '\\$+' + IDENT_RE,
   };
   const PREPROCESSOR = {
-    scope: 'meta',
+    scope: "meta",
     variants: [
       { begin: /<\?php/, relevance: 10 }, // boost for obvious PHP
       { begin: /<\?=/ },
@@ -411,6 +414,8 @@ export default function(hljs) {
       VARIABLE,
       LEFT_AND_RIGHT_SIDE_OF_DOUBLE_COLON,
       hljs.C_BLOCK_COMMENT_MODE,
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.HASH_COMMENT_MODE,
       STRING,
       NUMBER,
       CONSTRUCTOR_CALL,
@@ -435,13 +440,20 @@ export default function(hljs) {
     NAMED_ARGUMENT,
     LEFT_AND_RIGHT_SIDE_OF_DOUBLE_COLON,
     hljs.C_BLOCK_COMMENT_MODE,
+    hljs.C_LINE_COMMENT_MODE,
+    hljs.HASH_COMMENT_MODE,
     STRING,
     NUMBER,
     CONSTRUCTOR_CALL,
   ];
 
   const ATTRIBUTES = {
-    begin: regex.concat(/#\[\s*/, PASCAL_CASE_CLASS_NAME_RE),
+    begin: regex.concat(/#\[\s*\\?/,
+      regex.either(
+        PASCAL_CASE_CLASS_NAME_RE,
+        UPCASE_NAME_RE
+      )
+    ),
     beginScope: "meta",
     end: /]/,
     endScope: "meta",
@@ -471,7 +483,10 @@ export default function(hljs) {
       ...ATTRIBUTE_CONTAINS,
       {
         scope: 'meta',
-        match: PASCAL_CASE_CLASS_NAME_RE
+        variants: [
+          { match: PASCAL_CASE_CLASS_NAME_RE },
+          { match: UPCASE_NAME_RE }
+        ]
       }
     ]
   };
@@ -551,9 +566,12 @@ export default function(hljs) {
             keywords: KEYWORDS,
             contains: [
               'self',
+              ATTRIBUTES,
               VARIABLE,
               LEFT_AND_RIGHT_SIDE_OF_DOUBLE_COLON,
               hljs.C_BLOCK_COMMENT_MODE,
+              hljs.C_LINE_COMMENT_MODE,
+              hljs.HASH_COMMENT_MODE,
               STRING,
               NUMBER
             ]

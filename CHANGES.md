@@ -1,4 +1,167 @@
-## Version 11.10.0 (Next Release)
+## Version 11.11.2
+
+Themes:
+
+- added "vs Dark " theme [Twineee1][]
+
+New Grammars:
+
+- added 3rd party Aiken grammar to SUPPORTED_LANGUAGES [Josh Marchand][]
+- added 3rd party VoltScript grammar to SUPPORTED_LANGUAGES [Chester Moses][]
+- added 3rd party Prisma grammar to SUPPORTED_LANGUAGES [SungHyun Kim][]
+- added 3rd party Magik grammar to SUPPORTED_LANGUAGES [Sebastiaan Speck][]
+- added 3rd party Gleam grammar to SUPPORTED_LANGUAGES [Filip Hoffmann][]
+- added 3rd party L4 grammar to SUPPORTED_LANGUAGES [Thomas Gorissen][]
+- added 3rd party Bicep grammar to SUPPORTED_LANGUAGES [Anthony Martin][]
+- added 3rd party Abc Notation grammar to SUPPORTED_LANGUAGES [NriotHrreion][]
+
+Core Grammars:
+
+- fix(javascript) correctly highlight 'for await' again [wolfgang42][]
+- enh(csp) add missing directives / keywords from MDN (7 more) [Max Liashuk][]
+- enh(ada) add new `parallel` keyword, allow `[]` for Ada 2022 [Max Reznik][]
+- fix(ex) adds support for `?'` char literal and missing `defguardp` keyword [Kevin Bloch][]
+- fix(diff) fix unified diff hunk header regex to allow unpaired numbers [Chris Wilson][]
+- enh(php) support single line and hash comments in attributes, constructor and functions [Antoine Musso][]
+- enh(json) add json5 support [Kerry Shetline][]
+- fix(css) `unicode-range` parsing, issue #4253 [Kerry Shetline][]
+- fix(csharp) Support digit separators [te-ing][]
+
+Documentation:
+
+- alphabetized languages + upper-cased BASIC in SUPPORTED_LANGUAGES.md [Adam Lui][]
+
+Themes:
+
+- Fix: cybertopia themes render correctly in shadow DOM [hbgl][]
+
+CONTRIBUTORS
+
+[Josh Marchand]: https://github.com/yHSJ
+[Max Liashuk]: https://github.com/probil
+[Max Reznik]: https://github.com/reznikmm
+[Kevin Bloch]: https://github.com/codingthat
+[Chris Wilson]: https://github.com/sushicw
+[Antoine Musso]: https://github.com/hashar
+[Chester Moses]: https://github.com/Chester-Moses-HCL
+[Kerry Shetline]: https://github.com/kshetline
+[SungHyun Kim]: https://github.com/witch-factory
+[Adam Lui]: https://github.com/adamlui
+[Sebastiaan Speck]: https://github.com/sebastiaanspeck
+[Filip Hoffmann]: https://github.com/folospior
+[Twineee1]: https://github.com/Twineee1
+[hbgl]: https://github.com/hbgl
+[Thomas Gorissen]: https://github.com/serrynaimo
+[te-ing]: https://github.com/te-ing
+[Anthony Martin]: https://github.com/anthony-c-martin
+[NriotHrreion]: https://github.com/NriotHrreion
+
+
+## Version 11.11.1
+
+- Fixes regression with Rust grammar.
+
+
+## Version 11.11.0
+
+CAVEATS / POTENTIALLY BREAKING CHANGES
+
+- Nothing yet.
+
+
+Core Grammars:
+
+- fix(rust) - adds emoji support in single quote strings [joshgoebel][]
+- fix(apache) - support line continuation via `\` [Josh Goebel][]
+- fix(makefile) - allow strings inside `$()` expressions [aneesh98][]
+- enh(arcade) updated to ArcGIS Arcade version 1.29 [Kristian Ekenes][]
+- enh(css) add all properties listed on MDN (96 additions including `anchor-name`, `aspect-ratio`, `backdrop-filter`, `container`, `margin-trim`, `place-content`, `scroll-timeline`, ...) [BaliBalo][]
+- enh(excel) add built-in functions for Excel 365 release to 2024 [Danny Winrow][]
+- enh(erlang) OTP 27 triple-quoted strings [nixxquality][]
+- enh(erlang) OTP 27 doc attribute [nixxquality][]
+- enh(erlang) OTP 27 Sigil type [nixxquality][]
+- enh(erlang) OTP25/27 maybe statement [nixxquality][]
+- enh(dart) Support digit-separators in number literals [Sam Rawlins][]
+- enh(csharp) add Contextual keywords `file`, `args`, `dynamic`, `record`, `required` and `scoped` [Alvin Joy][]
+- enh(lua) add 'pluto' as an alias [Sainan]
+- enh(bash) add reserved keywords `time` and `coproc` [Álvaro Mondéjar][]
+- enh(nix) update keywords [h7x4][]
+- enh(nix) support paths [h7x4][]
+- enh(nix) support lookup paths [h7x4][]
+- enh(nix) support operators [h7x4][]
+- enh(nix) support REPL keywords [h7x4][]
+- enh(nix) support markdown comments [h7x4][]
+- enh(nix) support basic function params [h7x4][]
+- enh(nix) better parsing of attrsets [h7x4][]
+- fix(c) - Fixed hex numbers with decimals  [Dxuian]
+- fix(typescript) - Fixedoptional property not highlighted correctly  [Dxuian]
+- fix(ruby) - fix `|=` operator false positives (as block arguments) [Aboobacker MK]
+- enh(gcode) rewrote language for modern gcode support [Barthélémy Bonhomme][]
+- fix(sql) - Fixed sql primary key and foreign key spacing issue   [Dxuian]
+- fix(cpp) added flat_set and flat_map as a part of cpp 23 version [Lavan]
+- fix(yaml) - Fixed special chars in yaml   [Dxuian]
+- fix(basic) - Fixed closing quotation marks not required for a PRINT statement [Somya]
+- fix(nix) remove `add` builtin [h7x4][]
+- fix(nix) mark `or` as builtin instead of literal [h7x4][]
+- fix(nix) handle `'''` string escapes [h7x4][]
+- fix(nix) handle backslash string escapes [h7x4][]
+- fix(nix) don't mix escapes for `"` and `''` strings [h7x4][]
+- fix(swift) - Fixed syntax highlighting for class func/var declarations [guuido]
+- fix(yaml) - Fixed wrong escaping behavior in single quoted strings [guuido]
+- enh(nim) - Add `concept` and `defer` to list of Nim keywords [Jake Leahy]
+- fix(cpp) - Exclude keywords from highlighting as function calls [Eisenwave]
+
+New Grammars:
+
+- added 3rd party TTCN-3 grammar to SUPPORTED_LANGUAGES [Osmocom][]
+- added 3rd party Odin grammar to SUPPORTED_LANGUAGES [clsource][]
+- added 3rd party Liquid grammar to SUPPORTED_LANGUAGES [Laurel King][]
+
+Developer Tools:
+
+- Nothing yet.
+
+Themes:
+
+- Added `Rosé Pine` theme [William Wilkinson][]
+- Added `Cybertopia Cherry` theme [Alexandre ZANNI][]
+- Added `Cybertopia Dimmer` theme [Alexandre ZANNI][]
+- Added `Cybertopia Icecap` theme [Alexandre ZANNI][]
+- Added `Cybertopia Saturated` theme [Alexandre ZANNI][]
+
+Improvements:
+
+- Resolve the memory leak problem when creating multiple Highlight.js instances [Imken][]
+
+CONTRIBUTORS
+
+[Josh Goebel]: https://github.com/joshgoebel
+[aneesh98]: https://github.com/aneesh98
+[BaliBalo]: https://github.com/BaliBalo
+[William Wilkinson]: https://github.com/wilkinson4
+[nixxquality]: https://github.com/nixxquality
+[srawlins]: https://github.com/srawlins
+[Alvin Joy]: https://github.com/alvinsjoy
+[Dxuian]:https://github.com/Dxuian
+[Aboobacker MK]: https://github.com/tachyons
+[Imken]: https://github.com/immccn123
+[Sainan]: https://github.com/Sainan
+[Osmocom]: https://github.com/osmocom
+[Álvaro Mondéjar]: https://github.com/mondeja
+[Alexandre ZANNI]: https://github.com/noraj
+[Barthélémy Bonhomme]: https://github.com/barthy-koeln
+[Lavan]: https://github.com/jvlavan
+[Somya]: https://github.com/somya-05
+[guuido]: https://github.com/guuido
+[clsource]: https://github.com/clsource
+[Jake Leahy]: https://github.com/ire4ever1190
+[Laurel King]: https://github.com/laurelthorburn
+[Kristian Ekenes]: https://github.com/ekenes
+[Danny Winrow]: https://github.com/dannywinrow
+[Eisenwave]: https://github.com/Eisenwave/
+
+
+## Version 11.10.0
 
 CAVEATS / POTENTIALLY BREAKING CHANGES
 
@@ -6,6 +169,12 @@ CAVEATS / POTENTIALLY BREAKING CHANGES
 
 Core Grammars:
 
+- enh(typescript) add support for `satisfies` operator [Kisaragi Hiu][]
+- enc(c) added more C23 keywords [Melkor-1][]
+- enh(json) added jsonc as an alias [BackupMiles][]
+- enh(gml) updated to latest language version (GML v2024.2) [gnysek][]
+- enh(c) added more C23 keywords and preprcoessor directives [Eisenwave][]
+- enh(js/ts) support namespaced tagged template strings [Aral Balkan][]
 - enh(perl) fix false-positive variable match at end of string [Josh Goebel][]
 - fix(cpp) not all kinds of number literals are highlighted correctly [Lê Duy Quang][]
 - fix(css) fix overly greedy pseudo class matching [Bradley Mackey][]
@@ -15,8 +184,10 @@ Core Grammars:
 - fix(rust) fix for r# raw identifier not being highlighted correctly. [JaeBaek Lee][]
 - enh(rust) Adding union to be recognized as a keyword in Rust. [JaeBaek Lee][]
 - fix(yaml) fix for yaml with keys having brackets highlighted incorrectly [Aneesh Kulkarni][]
+- fix(csharp) add raw string highlighting for C# 11. [Tara][]
 - fix(bash) fix # within token being detected as the start of a comment [Felix Uhl][]
 - fix(python) fix `or` conflicts with string highlighting [Mohamed Ali][]
+- enh(python) adds a scope to the `self` variable [Lee Falin][]
 - enh(delphi) allow digits to be omitted for hex and binary literals [Jonah Jeleniewski][]
 - enh(delphi) add support for digit separators [Jonah Jeleniewski][]
 - enh(delphi) add support for character strings with non-decimal numerics [Jonah Jeleniewski][]
@@ -25,6 +196,19 @@ Core Grammars:
 - fix(swift) correctly highlight generics and conformances in type definitions [Bradley Mackey][]
 - enh(swift) add package keyword [Bradley Mackey][]
 - fix(swift) ensure keyword attributes highlight correctly [Bradley Mackey][]
+- fix(types) fix interface LanguageDetail > keywords [Patrick Chiu]
+- enh(java) add `goto` to be recognized as a keyword in Java [Alvin Joy][]
+- enh(bash) add keyword `sudo` [Alvin Joy][]
+- fix(haxe) captures `new` keyword without capturing it within variables/class names [Cameron Taylor][]
+- fix(go) fix go number literals to accept `_` separators, add hex p exponents [Lisa Ugray][]
+- enh(markdown) add entity support [David Schach][] [TaraLei][]
+- enh(css) add `justify-items` and `justify-self` attributes [Vasily Polovnyov][]
+- enh(css) add `accent-color`, `appearance`, `color-scheme`, `rotate`, `scale` and `translate` attributes [Carl Räfting][]
+- fix(fortran) fixes parsing of keywords delimited by dots [Julien Bloino][]
+- enh(css) add `select`, `option`, `optgroup`, `picture` and `source` to list of known tags [Vasily Polovnyov][]
+- enh(css) add `inset`, `inset-*`, `border-start-*-radius` and `border-end-*-radius` attributes [Vasily Polovnyov][]
+- enh(css) add `text-decoration-skip-ink`, `text-decoration-thickness` and `text-underline-offset` attributes [Vasily Polovnyov][]
+- enh(java) add `when` to be recognized as a keyword in Java [Chiel van de Steeg][]
 
 New Grammars:
 
@@ -32,16 +216,28 @@ New Grammars:
 - added 3rd party Luau grammar to SUPPORTED_LANGUAGES [Robloxian Demo][]
 - added 3rd party ReScript grammar to SUPPORTED_LANGUAGES [Paul Tsnobiladzé][]
 - added 3rd party Zig grammar to SUPPORTED_LANGUAGES [Hyou BunKen][]
+- added 3rd party WGSL grammar to SUPPORTED_LANGUAGES [Arman Uguray][]
+- added 3rd party Unison grammar to SUPPORTED_LANGUAGES [Rúnar Bjarnason][]
+- added 3rd party Phix grammar to SUPPORTED_LANGUAGES [PeteLomax][]
+- added 3rd party Mirth grammar to SUPPORTED_LANGUAGES [Sierra][]
+- added 3rd party JSONata grammar to SUPPORTED_LANGUAGES [Vlad Dimov][]
 
 Developer Tool:
 
 - enh(tools): order CSS options picklist [David Schach][]
 - enh(tools): remove duplicate CSS options [David Schach][]
+- (typescript): deprecate old `highlight` API [Misha Kaletsky][]
 
 Themes:
 
 - Added `1c-light` theme a like in the IDE 1C:Enterprise 8 (for 1c) [Vitaly Barilko][]
 
+[Kisaragi Hiu]: https://github.com/kisaragi-hiu
+[Melkor-1]: https://github.com/Melkor-1
+[PeteLomax]: https://github.com/petelomax
+[gnysek]: https://github.com/gnysek
+[Eisenwave]: https://github.com/Eisenwave
+[Aral Balkan]: https://github.com/aral
 [Lê Duy Quang]: https://github.com/leduyquang753
 [Mohamed Ali]: https://github.com/MohamedAli00949
 [JaeBaek Lee]: https://github.com/ThinkingVincent
@@ -49,6 +245,7 @@ Themes:
 [Kristian Ekenes]: https://github.com/ekenes
 [Aneesh Kulkarni]: https://github.com/aneesh98
 [Bruno Meneguele]: https://github.com/bmeneg
+[Tara]: https://github.com/taralei
 [Felix Uhl]: https://github.com/iFreilicht
 [nataliia-radina]: https://github.com/Nataliia-Radina
 [Robloxian Demo]: https://github.com/RobloxianDemo
@@ -57,6 +254,20 @@ Themes:
 [Josh Goebel]: https://github.com/joshgoebel
 [CY Fung]: https://github.com/cyfung1031
 [Vitaly Barilko]: https://github.com/Diversus23
+[Patrick Chiu]: https://github.com/patrick-kw-chiu
+[Alvin Joy]: https://github.com/alvinsjoy
+[Lisa Ugray]: https://github.com/lugray
+[TaraLei]: https://github.com/TaraLei
+[Cameron Taylor]: https://github.com/ninjamuffin99
+[Vasily Polovnyov]: https://github.com/vast
+[Arman Uguray]: https://github.com/armansito
+[Rúnar Bjarnason]: https://github.com/runarorama
+[Carl Räfting]: https://github.com/carlrafting
+[BackupMiles]: https://github.com/BackupMiles
+[Julien Bloino]: https://github.com/jbloino
+[Sierra]: https://github.com/casuallyblue
+[Vlad Dimov]: https://github.com/DevDimov
+[Chiel van de Steeg]: https://github.com/cvdsteeg
 
 
 ## Version 11.9.0
@@ -83,6 +294,7 @@ New Grammars:
 
 Core Grammars:
 
+- fix(cpp) fixed highlighter break state [Md Saad Akhtar][]
 - fix(rust) added negative-lookahead for callable keywords `if` `while` `for` [Omar Hussein][]
 - enh(armasm) added `x0-x30` and `w0-w30` ARMv8 registers [Nicholas Thompson][]
 - enh(haxe) added `final`, `is`, `macro` keywords and `$` identifiers [Robert Borghese][]
@@ -105,9 +317,9 @@ Core Grammars:
 - fix(swift) `warn_unqualified_access` is an attribute [Bradley Mackey][]
 - enh(swift) macro attributes are highlighted as keywords [Bradley Mackey][]
 - enh(stan) updated for version 2.33 (#3859) [Brian Ward][]
+- enh(llvm) match additional types [wtz][]
 - fix(css) added '_'  css variable detection [Md Saad Akhtar][]
 - enh(groovy) add `record` and `var` as keywords [Guillaume Laforge][]
-
 
 Developer Tool:
 
@@ -129,6 +341,7 @@ Developer Tool:
 [Nicholas Thompson]: https://github.com/NAThompson
 [Yasith Deelaka]: https://github.com/YasithD
 [Brian Ward]: https://github.com/WardBrian
+[wtz]: https://github.com/wangtz0607
 [Md Saad Akhtar]: https://github.com/akhtarmdsaad
 [Guillaume Laforge]: https://github.com/glaforge
 
@@ -174,6 +387,7 @@ Core Grammars:
 [AdamRaichu]: https://github.com/AdamRaichu
 [Ali Ukani]: https://github.com/ali
 [Jeroen van Vianen]: https://github.com/morinel
+[gnysek]: https://github.com/gnysek
 [Rijenkii]: https://github.com/rijenkii
 [faga295]: https://github.com/faga295
 [rvanasa]: https://github.com/rvanasa
@@ -272,6 +486,7 @@ Grammars:
 [Mousetail]: https://github.com/mousetail
 [Gabriel Gonçalves]: https://github.com/KTSnowy
 [Nikita Sobolev]: https://github.com/sobolevn
+[Misha Kaletsky]: https://github.com/mmkal
 
 ## Version 11.5.0
 

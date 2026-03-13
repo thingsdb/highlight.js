@@ -133,7 +133,7 @@ export default function(hljs) {
     contains: [] // defined later
   };
   const HTML_TEMPLATE = {
-    begin: 'html`',
+    begin: '\.?html`',
     end: '',
     starts: {
       end: '`',
@@ -146,7 +146,7 @@ export default function(hljs) {
     }
   };
   const CSS_TEMPLATE = {
-    begin: 'css`',
+    begin: '\.?css`',
     end: '',
     starts: {
       end: '`',
@@ -159,7 +159,7 @@ export default function(hljs) {
     }
   };
   const GRAPHQL_TEMPLATE = {
-    begin: 'gql`',
+    begin: '\.?gql`',
     end: '',
     starts: {
       end: '`',
@@ -265,7 +265,7 @@ export default function(hljs) {
   const PARAMS = {
     className: 'params',
     // convert this to negative lookbehind in v12
-    begin: /(\s*)\(/, // to match the parms with 
+    begin: /(\s*)\(/, // to match the parms with
     end: /\)/,
     excludeBegin: true,
     excludeEnd: true,
@@ -387,7 +387,8 @@ export default function(hljs) {
       noneOf([
         ...ECMAScript.BUILT_IN_GLOBALS,
         "super",
-        "import"
+        "import",
+        "await",
       ].map(x => `${x}\\s*\\(`)),
       IDENT_RE, regex.lookahead(/\s*\(/)),
     className: "title.function",
@@ -456,7 +457,7 @@ export default function(hljs) {
     keywords: KEYWORDS,
     // this will be extended by TypeScript
     exports: { PARAMS_CONTAINS, CLASS_REFERENCE },
-    illegal: /#(?![$_A-z])/,
+    illegal: /#(?![$_A-Za-z])/,
     contains: [
       hljs.SHEBANG({
         label: "shebang",
@@ -476,8 +477,8 @@ export default function(hljs) {
       NUMBER,
       CLASS_REFERENCE,
       {
-        className: 'attr',
-        begin: IDENT_RE + regex.lookahead(':'),
+        scope: 'attr',
+        match: IDENT_RE + regex.lookahead(':'),
         relevance: 0
       },
       FUNCTION_VARIABLE,
