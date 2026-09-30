@@ -93,7 +93,7 @@ export default function(hljs) {
                     'alt_raise|assert|base64_encode|base64_decode|bool|bytes|room|closure|' +
                     'datetime|deep|del_enum|del_type|enum|enum_info|enum_map|enums_info|err|change_id|float|has_enum|has_type|int|is_array|' +
                     'is_ascii|is_bool|is_bytes|is_closure|is_datetime|is_enum|is_err|is_float|is_inf|is_int|is_room|is_task|is_time_zone|' +
-                    'is_list|is_mpdata|is_nan|is_nil|is_raw|is_regex|is_set|is_str|is_thing|is_timeval|is_tuple|' +
+                    'is_list|is_mpdata|is_nan|is_nil|is_raw|is_regex|is_set|is_str|is_thing|is_timeval|is_tuple|uuid|is_uuid|dict|is_dict|' +
                     'is_utf8|is_email|is_url|is_tel|timeit|task|tasks|json_dump|json_load|regex|list|mod_enum|mod_type|new|new_type|now|raise|rand|range|' +
                     'randint|randstr|refs|log|rename_enum|rename_type|set|set_enum|set_type|str|thing|try|type|' +
                     'future|is_future|timeval|type_assert|type_count|type_info|types_info|wse|nse|export|import|root|' +
