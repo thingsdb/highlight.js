@@ -64,7 +64,7 @@ export default function(hljs) {
         className: 'regexp',
         begin: new RegExp('(/[^/\\\\\\n]+(?:\\\\.[^/\\\\]*)*/i?)'),
         relevance: 0,
-    }
+    };
 
     return {
         aliases: ['ti'],
