@@ -53,7 +53,7 @@ export default function(hljs) {
     };
 
     var COMMENTS = {
-        className: 'doc',
+        className: 'comment',
         variants: [
             hljs.C_LINE_COMMENT_MODE,
             hljs.C_BLOCK_COMMENT_MODE
