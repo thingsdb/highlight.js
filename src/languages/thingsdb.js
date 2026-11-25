@@ -2,7 +2,7 @@
 Language: ThingsDB
 Author: Jeroen van der Heijden <jeroen@cesbit.com>
 Category: common, scripting
-Website: https://thingsdb.net
+Website: https://thingsdb.io
 */
 
 export default function(hljs) {
